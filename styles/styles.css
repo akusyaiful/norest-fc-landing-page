@@ -1,0 +1,639 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Saira Semi Condensed", sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 64px;
+  background-color: #e2e1d5;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 90px;
+}
+
+.logo h2 {
+  color: #13413f;
+}
+
+.navbar-list .hamburger-button {
+  display: none;
+  font-size: 24px;
+  color: #13413f;
+}
+
+.navbar-list .close-button {
+  display: none;
+  font-size: 30px;
+  color: #e2e1d5;
+}
+
+.navbar-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem 3rem;
+}
+
+.navbar-list li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.navbar-list li:nth-child(5) {
+  border: 2px solid #13413f;
+  padding: 0px 16px;
+}
+
+.navbar-list li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #13413f;
+}
+
+.navbar-list li a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #13413f;
+  transition: 0.2s;
+}
+
+.navbar-list li a:hover::before {
+  width: 100%;
+}
+
+#club {
+  background-image: linear-gradient(
+    to bottom,
+    #f6f2e8,
+    #bfc2b3,
+    #869585,
+    #4d6a5f,
+    #13413f
+  );
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0px 64px;
+  position: relative;
+}
+
+.club-description h1 {
+  color: #e2e1d5;
+}
+
+.club-description p {
+  font-size: 20px;
+  color: #e2e1d5;
+  font-weight: 600;
+}
+
+.box {
+  padding: 128px 64px;
+}
+
+#trophy {
+  background-color: #e2e1d5;
+}
+
+#trophy h3 {
+  color: #13413f;
+}
+
+.trophy-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  border-bottom: 2px solid #13413f;
+}
+
+.trophy-image {
+  width: 200px;
+}
+
+#schedule {
+  background-color: #13413f;
+}
+
+#schedule h2,
+#schedule h3 {
+  color: #e2e1d5;
+}
+
+.card-schedule-wrapper > p {
+  color: #e2e1d5;
+}
+
+.card-schedule {
+  background-color: #e2e1d5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #13413f;
+  padding: 16px;
+}
+
+.card-schedule .versus {
+  color: #a87720;
+  font-weight: 600;
+}
+
+.card-schedule .teams-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-schedule .teams-container .teams {
+  display: flex;
+  align-items: center;
+}
+
+.card-schedule .teams-container .teams p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-schedule .teams-container .teams img {
+  width: 80px;
+}
+
+.card-schedule .fixture .date {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.card-schedule .league {
+  color: #a87720;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.card-schedule button {
+  border: 2px solid #13413f;
+  background-color: #e2e1d5;
+  color: #13413f;
+  padding: 8px 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#squad {
+  background-color: #e2e1d5;
+}
+
+#squad h2 {
+  color: #13413f;
+  margin: 0px;
+  padding: 128px 64px 0px;
+  margin-bottom: 24px;
+}
+
+.slider-container {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  position: absolute;
+  text-align: center;
+}
+
+.slider .player-name {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.slider .player-number {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.slider img {
+  margin: -100px;
+}
+
+.player-statistics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.player-statistics .data {
+  color: #a87720;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.player-statistics .total {
+  margin: 0px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.button-navigation-wrapper {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 32px;
+}
+
+.button-navigation {
+  font-size: 48px;
+  color: #13413f;
+  cursor: pointer;
+}
+
+aside {
+  background-color: #a87720;
+}
+
+aside h2 {
+  color: #e2e1d5;
+}
+
+.tour-card-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tour-card {
+  background-color: #e2e1d5;
+  padding: 16px;
+}
+
+.tour-name {
+  text-align: center;
+}
+
+.tour-name p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.tour-name img {
+  width: 100px;
+}
+
+.tour-card .buy-ticket {
+  text-align: center;
+}
+
+.tour-card .buy-ticket {
+  text-align: center;
+}
+
+.tour-card .buy-ticket p {
+  font-size: 24px;
+}
+
+.tour-card .buy-ticket button {
+  border: 2px solid #13413f;
+  background-color: #e2e1d5;
+  color: #13413f;
+  padding: 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+}
+
+footer .footer-top-content {
+  background-color: #13413f;
+  padding: 32px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer .footer-bottom-content {
+  background-color: #0f3432;
+  padding: 16px 63px;
+  text-align: center;
+}
+
+footer img {
+  width: 90px;
+}
+
+footer p,
+footer a {
+  color: #e2e1d5;
+  font-weight: 600;
+}
+
+footer span {
+  font-weight: 400;
+}
+
+footer .logo-footer {
+  display: flex;
+  align-items: flex-start;
+}
+
+footer .logo-footer p {
+  margin: 0px;
+}
+
+footer h2 {
+  margin: 0px;
+  color: #e2e1d5;
+}
+
+.social-media-wrapper {
+  text-align: center;
+}
+
+.social-media-wrapper .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.social-media-wrapper .social-media a {
+  color: white;
+}
+
+.social-media-wrapper .social-media .box-social-media {
+  padding: 32px 24px;
+}
+
+.social-media-wrapper .social-media .youtube {
+  background-color: #bb0100;
+}
+
+.social-media-wrapper .social-media .instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+
+.social-media-wrapper .social-media .facebook {
+  background-color: #3c5997;
+}
+
+.social-media-wrapper .social-media .twitter {
+  background-color: #54acee;
+}
+
+.social-media-wrapper .social-media .tiktok {
+  background-color: #000000;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-container {
+    padding: 0px 32px;
+  }
+
+  #club {
+    padding: 0px 32px;
+  }
+
+  #club img {
+    width: 400px;
+  }
+
+  .box {
+    padding: 32px !important;
+  }
+
+  .card-schedule .league {
+    display: none;
+  }
+
+  .card-schedule .teams-container {
+    flex: 3;
+  }
+
+  #squad h2 {
+    padding: 32px 32px 0px;
+  }
+
+  footer .footer-top-content {
+    padding: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo h2 {
+    display: none;
+  }
+
+  #club {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #club img {
+    order: -1;
+    width: 300px;
+  }
+
+  #club .club-description p {
+    font-size: 16px;
+    color: #e2e1d5;
+    font-weight: 600;
+  }
+
+  .trophy-container {
+    flex-direction: column;
+    gap: unset;
+  }
+
+  .card-schedule {
+    flex-direction: column;
+  }
+
+  .card-schedule .teams-container {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .card-schedule button {
+    margin-top: 8px;
+  }
+
+  footer .footer-top-content {
+    flex-direction: column;
+  }
+
+  footer .logo-footer {
+    width: 100%;
+  }
+
+  .social-media-wrapper {
+    width: 100%;
+    margin-top: 32px;
+  }
+
+  footer .footer-bottom-content {
+    padding: 16px 32px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .logo img {
+    width: 80px;
+  }
+
+  .navbar-list ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    background-color: #13413f;
+    margin: 0;
+    width: 50%;
+    height: 100vh;
+    padding: 16px;
+    padding-top: 50px;
+    transition: 0.3s linear;
+  }
+
+  .navbar-list ul.is-active {
+    right: 0px;
+  }
+
+  .navbar-list li a {
+    color: #e2e1d5;
+  }
+
+  .navbar-list li:nth-child(5) {
+    border: 2px solid #e2e1d5;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-list .hamburger-button {
+    display: block;
+  }
+
+  .navbar-list .close-button {
+    display: block;
+    position: fixed;
+    top: 16px;
+    z-index: 9999;
+    right: -400px;
+    transition: 0.3s linear;
+  }
+
+  .navbar-list .close-button.is-active {
+    right: 16px;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .card-schedule .teams-container {
+    justify-content: space-around;
+  }
+
+  .card-schedule .teams-container .teams {
+    flex-direction: column;
+  }
+
+  .card-schedule .teams-container .teams p {
+    order: 1;
+    margin: 0px;
+    font-size: 16px;
+  }
+
+  .card-schedule .teams-container .teams img {
+    width: 70px;
+  }
+
+  .slider-container {
+    height: 470px;
+  }
+
+  .slider img {
+    width: 300px;
+  }
+
+  .slider .player-name {
+    font-size: 30px;
+  }
+
+  .button-navigation {
+    font-size: 30px;
+    color: #13413f;
+    cursor: pointer;
+  }
+
+  .social-media-wrapper {
+    text-align: left;
+  }
+
+  .social-media-wrapper .social-media {
+    justify-content: flex-start;
+  }
+
+  footer .logo-footer {
+    flex-direction: column;
+  }
+
+  footer h2 {
+    font-size: 18px;
+  }
+
+  .social-media-wrapper .social-media .box-social-media {
+    padding: 0px;
+    background-color: transparent;
+    background: transparent;
+  }
+}
